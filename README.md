@@ -63,8 +63,6 @@ Langkah-langkahnya:
 3. Kalikan channel Saturation (index `1`) dengan `sat_scale` untuk menaikkan intensitas warna.
 4. Ubah kembali ke `uint8` (rentang 0–255) dan konversi balik ke BGR agar bisa ditampilkan.
 
-> ⚠️ **Catatan:** Pada bagian gambar, hasil perkalian `hsv_img[:, :, 1] * sat_scale` tidak dibatasi dengan `np.clip()`. Jika hasil kali melebihi 255 sebelum di-cast ke `uint8`, nilainya bisa *wrap-around* (contoh: 200 × 8 = 1600 → `1600 % 256 = 64`) sehingga warna menjadi tidak terduga. Bagian video di bawah sudah menerapkan `np.clip()` untuk mencegah hal ini.
-
 ---
 
 ## 2. Bagian Video
