@@ -11,7 +11,6 @@ red_img = img.copy()
 red_img[:,:,0] = 0
 red_img[:,:,1] = 0 
 
-
 green_img = img.copy()
 green_img[:,:,0] = 0
 green_img[:,:,2] = 0 
